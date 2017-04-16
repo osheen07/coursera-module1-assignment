@@ -1,1 +1,1 @@
-# coursera-module1-assignment
+Coursera Assignment for Module 1
