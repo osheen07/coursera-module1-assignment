@@ -9,6 +9,7 @@ LunchCheckerController.$inject = ['$scope'];
 function LunchCheckerController($scope) {
   $scope.message = "List items in the text box as per the instructions and click on the button to check if it is too much!";
   $scope.items = "";
+  $scope.customStyle = {};
 //  $scope.itemsArray = $scope.splitItems();
 
   $scope.checkIfTooMuch = function () {
@@ -20,9 +21,11 @@ function LunchCheckerController($scope) {
     if(array.length<=3){
       $scope.message = "Enjoy!";
     }
+    $scope.customStyle.style = {"color": "green"};
   }
   else {
     $scope.message = "Please enter data first.";
+    $scope.customStyle.style = {"color": "red"};
   }
   };
 };
