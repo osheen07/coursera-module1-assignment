@@ -15,6 +15,13 @@ function LunchCheckerController($scope) {
   $scope.checkIfTooMuch = function () {
     if($scope.items != ""){
     var array = $scope.items.split(',');
+    array = array.filter(function (n) {
+      if(n === "" || n === " ")
+        return false;
+      else
+        return true;
+    });
+    console.log(array);
     if(array.length>3) {
       $scope.message = "Too Much!";
     };
