@@ -18,15 +18,17 @@
      <h1>Lunch Checker</h1>
          <div class="form-group">
              <input id="lunch-menu" type="text"
-             placeholder="list comma separated dishes you usually have for lunch"
+             placeholder="List comma separated dishes you usually have for lunch."
              class="form-control"
-             ng-model="items">
+             ng-model="items"
+             ng-style="customStyleButton.style">
          </div>
          <div class="form-group">
              <button class="btn btn-default" ng-click="checkIfTooMuch()">Check If Too Much</button>
          </div>
          <div class="form-group message">
            <!-- Your message can go here. -->
+           <p>Empty items will not be considered. For Example, an input of 'item1,,item2, ,item3' will be 3 items in total.</p><br>
            <p ng-style="customStyle.style">{{message}}</p>
          </div>
    </div>
